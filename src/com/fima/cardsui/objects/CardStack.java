@@ -120,7 +120,7 @@ public class CardStack extends AbstractCard {
 							public void onDismiss(View view, Object token) {
 								Card c = (Card) token;
 								cards.remove(c);
-								
+								c.OnSwipeCard();
 
 								mAdapter.setItems(mStack, getPosition());
 

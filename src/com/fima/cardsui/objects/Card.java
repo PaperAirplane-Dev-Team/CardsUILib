@@ -1,6 +1,7 @@
 package com.fima.cardsui.objects;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -117,7 +118,7 @@ public abstract class Card extends AbstractCard {
 		mListener = listener;
 	}
 
-	public void OnSwipeCard() {
+	protected void OnSwipeCard() {
 		if (onCardSwipedListener != null)
 			onCardSwipedListener.onCardSwiped();
 
