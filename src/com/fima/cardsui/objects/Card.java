@@ -1,7 +1,6 @@
 package com.fima.cardsui.objects;
 
 import android.content.Context;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -20,6 +19,8 @@ public abstract class Card extends AbstractCard {
 	private OnCardSwiped onCardSwipedListener;
 	private OnClickListener mListener;
 	protected View mCardLayout;
+	/** 用于在卡片上绑定一个对象以方便进一步的数据. */
+	private Object mBindedObject;
 
 	public Card() {
 
@@ -142,6 +143,14 @@ public abstract class Card extends AbstractCard {
 
 	protected int getFirstCardLayout() {
 		return R.layout.item_card_empty_first;
+	}
+
+	public Object getmBindedObject() {
+		return mBindedObject;
+	}
+
+	public void setmBindedObject(Object mBindedObject) {
+		this.mBindedObject = mBindedObject;
 	}
 
 }
