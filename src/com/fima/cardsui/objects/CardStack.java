@@ -3,7 +3,6 @@ package com.fima.cardsui.objects;
 import java.util.ArrayList;
 
 import android.content.Context;
-import android.content.res.Resources;
 import android.text.TextUtils;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -24,7 +23,6 @@ import com.nineoldandroids.animation.ObjectAnimator;
 public class CardStack extends AbstractCard {
 	private static final float _12F = 12f;
 	private static final float _45F = 45f;
-	private static final int _8 = 8;
 	private static final String NINE_OLD_TRANSLATION_Y = "translationY";
 	private ArrayList<Card> cards;
 	private String title;
@@ -120,7 +118,7 @@ public class CardStack extends AbstractCard {
 							public void onDismiss(View view, Object token) {
 								Card c = (Card) token;
 								cards.remove(c);
-								
+								c.OnSwipeCard();
 
 								mAdapter.setItems(mStack, getPosition());
 

@@ -19,6 +19,8 @@ public abstract class Card extends AbstractCard {
 	private OnCardSwiped onCardSwipedListener;
 	private OnClickListener mListener;
 	protected View mCardLayout;
+	/** 用于在卡片上绑定一个对象以方便进一步的数据. */
+	private Object mBindedObject;
 
 	public Card() {
 
@@ -117,7 +119,7 @@ public abstract class Card extends AbstractCard {
 		mListener = listener;
 	}
 
-	public void OnSwipeCard() {
+	protected void OnSwipeCard() {
 		if (onCardSwipedListener != null)
 			onCardSwipedListener.onCardSwiped();
 
@@ -141,6 +143,14 @@ public abstract class Card extends AbstractCard {
 
 	protected int getFirstCardLayout() {
 		return R.layout.item_card_empty_first;
+	}
+
+	public Object getmBindedObject() {
+		return mBindedObject;
+	}
+
+	public void setmBindedObject(Object mBindedObject) {
+		this.mBindedObject = mBindedObject;
 	}
 
 }
