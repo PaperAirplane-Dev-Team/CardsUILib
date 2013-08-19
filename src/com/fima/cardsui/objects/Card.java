@@ -55,6 +55,7 @@ public abstract class Card extends AbstractCard {
 		lp.setMargins(0, 0, 0, bottom);
 
 		view.setLayoutParams(lp);
+		view.setTag(mBindedObject);
 
 		return view;
 	}
@@ -78,6 +79,7 @@ public abstract class Card extends AbstractCard {
 		lp.setMargins(0, 0, 0, bottom);
 
 		view.setLayoutParams(lp);
+		view.setTag(mBindedObject);
 
 		return view;
 	}
@@ -103,6 +105,7 @@ public abstract class Card extends AbstractCard {
 		lp.setMargins(0, 0, 0, bottom);
 
 		view.setLayoutParams(lp);
+		view.setTag(mBindedObject);
 
 		return view;
 	}
